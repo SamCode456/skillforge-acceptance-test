@@ -11,8 +11,6 @@ features/
   no-funcionales/     USN-01, USN-02
 ```
 
-(La épica y las USN del otro integrante se agregan en sus propias carpetas.)
-
 ## Tests y User Stories relacionadas
 
 | ID test | Historia | Archivo .feature | Escenario |
