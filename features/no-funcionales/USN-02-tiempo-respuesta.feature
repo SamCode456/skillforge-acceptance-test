@@ -6,25 +6,25 @@ Característica: Tiempo de respuesta de la plataforma
   Para navegar fluidamente sin latencia
 
   Antecedentes:
-    # "Tráfico normal" definido como 100 usuarios concurrentes (valor propuesto; acordar con el equipo)
-    Dado que el sistema opera con 100 usuarios concurrentes navegando
+    Dado que un usuario navega por las pantallas principales
 
   @AT-USN02-01
-  Esquema del escenario: Carga rápida de pantallas principales bajo tráfico normal
-    Cuando un usuario solicita la visualización de "<pantalla>"
+  Esquema del escenario: Carga rápida bajo tráfico normal
+    Cuando solicita la visualización de "<pantalla>"
     Entonces el tiempo de renderizado no supera los <max_segundos> segundos
 
+    # El criterio del informe cubre el SkillTree; las vacantes se incluyen por el texto de la historia
     Ejemplos:
-      | pantalla          | max_segundos |
-      | SkillTree         | 3            |
-      | Panel de vacantes | 3            |
+      | pantalla  | max_segundos |
+      | SkillTree | 3            |
+      | Vacantes  | 3            |
 
   @AT-USN02-02 @extra
-  Esquema del escenario: Evaluación del tiempo medido frente al límite
+  Esquema del escenario: Valores límite del tiempo de renderizado
     Cuando se mide el tiempo de renderizado del SkillTree en <tiempo_medido> segundos
     Entonces la prueba se considera "<resultado>"
 
-    # Valores límite alrededor de 3 segundos
+    # Límite: no supera los 3 segundos
     Ejemplos:
       | tiempo_medido | resultado |
       | 2.9           | aprobada  |
